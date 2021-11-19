@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jmlim-go-study/maps"
+	"jmlim-go-study/structures"
 )
 
 func main() {
@@ -140,6 +140,46 @@ func main() {
 
 	//	maps.MapForRange()
 
-	maps.MapForRangeSort()
-	maps.VotesCountMap()
+	// maps.MapForRangeSort()
+	// maps.VotesCountMap()
+
+	// structures.BasicStruct()
+	// 	structures.DefinedTypeStruct()
+
+	/*var bolts structures.Part
+	bolts.Description = "Hex bolts"
+	bolts.Count = 24
+	structures.ShowInfo(bolts)
+
+	p := structures.MinimumOrder("Hex Bolts")
+	fmt.Println(p.Description, p.Count)*/
+
+	/*	subscriber1 := structures.DefaultSubscriber("Aman Singh")
+		subscriber1.Rate = 4.99
+		structures.PrintInfo(subscriber1)
+		fmt.Println("====")
+		subscriber2 := structures.DefaultSubscriber("Beth Ryan")
+		structures.PrintInfo(subscriber2)*/
+
+	/*var s structures.Subscriber
+	structures.ApplyDiscount(&s)
+	fmt.Println(s)
+
+	// 포인터를 통한 구조체 필드 접근
+	var value structures.Subscriber
+	var pointer *structures.Subscriber = &value
+	pointer.Name = "jmlim"
+	fmt.Println(pointer.Name)
+	(*pointer).Active = true
+	fmt.Println(pointer)*/
+
+	/*subscriber1 := structures_pointer.DefaultSubscriber("Aman Singh")
+	structures_pointer.ApplyDiscount(subscriber1)
+	structures_pointer.PrintInfo(subscriber1)
+
+	subscriber2 := structures_pointer.DefaultSubscriber("Beth Ryan")
+	structures_pointer.PrintInfo(subscriber2)*/
+
+	//	structures.Exam1()
+	structures.Exam2()
 }
