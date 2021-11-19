@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"jmlim-go-study/slice"
+	"jmlim-go-study/textfileread"
+	"log"
 )
 
 func main() {
@@ -84,5 +85,17 @@ func main() {
 
 	// slice.SliceChange()
 	// slice.UseAppend()
-	slice.UseAppend2()
+	//	slice.UseAppend2()
+
+	numbers, err := textfileread.GetFloats("data.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var sum float64 = 0
+	for _, number := range numbers {
+		sum += number
+	}
+	sampleCount := float64(len(numbers))
+	fmt.Printf("Average: %0.2f\n", sum/sampleCount)
 }
