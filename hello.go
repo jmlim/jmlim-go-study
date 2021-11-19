@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	several_func "jmlim-go-study/several-func"
+	"jmlim-go-study/maps"
 )
 
 func main() {
@@ -109,10 +109,37 @@ func main() {
 		fmt.Println(several_func.InRange(-10, 10, 4.1, 12, -12, -5.2))
 	*/
 
-	intSlice := []int{1, 2, 3}
+	/*intSlice := []int{1, 2, 3}
 	several_func.SeveralInts(intSlice...)
 
 	stringSlice := []string{"a", "b", "c", "d"}
-	several_func.Mix(1, true, stringSlice...)
+	several_func.Mix(1, true, stringSlice...)*/
 
+	/*lines, err := datafile.GetStrings("votes.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(lines)*/
+
+	//	slice.VotesCount()
+
+	/*	maps.SampleMap()
+		fmt.Println("=======")
+		maps.MapLiteral()*/
+
+	//	maps.ExampleMap()
+
+	// 	maps.ZeroValues()
+
+	//maps.Status("Alma")
+	//maps.Status("Jmlim") // jmlim 점수는 기록되지 않음...
+
+	// maps.DeleteMap()
+
+	// maps.VotesCountMap()
+
+	//	maps.MapForRange()
+
+	maps.MapForRangeSort()
+	maps.VotesCountMap()
 }
