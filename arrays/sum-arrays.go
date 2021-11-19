@@ -2,7 +2,7 @@ package arrays
 
 import (
 	"fmt"
-	"jmlim-go/textfileread"
+	"jmlim-go-study/textfileread"
 	"log"
 )
 
