@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jmlim-go-study/textfileread"
-	"log"
+	several_func "jmlim-go-study/several-func"
 )
 
 func main() {
@@ -87,7 +86,7 @@ func main() {
 	// slice.UseAppend()
 	//	slice.UseAppend2()
 
-	numbers, err := textfileread.GetFloats("data.txt")
+	/*numbers, err := textfileread.GetFloats("data.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -97,5 +96,23 @@ func main() {
 		sum += number
 	}
 	sampleCount := float64(len(numbers))
-	fmt.Printf("Average: %0.2f\n", sum/sampleCount)
+	fmt.Printf("Average: %0.2f\n", sum/sampleCount)*/
+
+	// 	slice.SliceExam2()
+
+	//	fmt.Println(os.Args[1:])
+	/*
+		fmt.Println(several_func.Maximum(71.8, 56.2, 89.5))
+		fmt.Println(several_func.Maximum(98.7, 89.7, 98.5, 92.3))
+
+		fmt.Println(several_func.InRange(1, 100, -12.5, 3.2, 0, 50, 103.5))
+		fmt.Println(several_func.InRange(-10, 10, 4.1, 12, -12, -5.2))
+	*/
+
+	intSlice := []int{1, 2, 3}
+	several_func.SeveralInts(intSlice...)
+
+	stringSlice := []string{"a", "b", "c", "d"}
+	several_func.Mix(1, true, stringSlice...)
+
 }
