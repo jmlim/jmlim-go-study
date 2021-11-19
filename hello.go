@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jmlim-go-study/keyboard"
-	"jmlim-go-study/pointer"
-	"log"
+	"jmlim-go-study/slice"
 )
 
 func main() {
@@ -63,7 +61,7 @@ func main() {
 		pointer.Double(&amount)
 		fmt.Println(amount)*/
 
-	truth := true
+	/*truth := true
 	pointer.Negate(&truth)
 	fmt.Println(truth)
 
@@ -78,5 +76,13 @@ func main() {
 	}
 
 	celsius := (fahrenheit - 32) * 5 / 9
-	fmt.Printf("%0.2f degrees Celsius\n", celsius)
+	fmt.Printf("%0.2f degrees Celsius\n", celsius)*/
+
+	//	slice.MakeSlice()
+	//	slice.SliceLiteral()
+	// slice.SliceExam()
+
+	// slice.SliceChange()
+	// slice.UseAppend()
+	slice.UseAppend2()
 }
