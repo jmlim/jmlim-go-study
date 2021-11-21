@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	user_type "jmlim-go-study/user-type"
+	"jmlim-go-study/embedding"
+	"log"
 )
 
 func main() {
@@ -213,5 +214,97 @@ func main() {
 
 	//user_type.Soda()
 	//	user_type.Milk()
-	user_type.ChangeLitersOrMilliliters()
+	// user_type.ChangeLitersOrMilliliters()
+	// encapsulation.DateExamplee()
+
+	/*coordinates := encapsulation.Coordinates{}
+	coordinates.SetLatitude(37.42)
+	coordinates.SetLongitude(-122.08)
+	fmt.Println(coordinates)*/
+	/*
+
+		date := encapsulation.Date{}
+		//	date.SetYear(2019)
+		err := date.SetYear(2019)
+		if err != nil {
+			log.Fatal(err)
+		}
+		err = date.SetMonth(5)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		err = date.SetDay(27)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		fmt.Println(date)
+		fmt.Println(date.Year())
+		fmt.Println(date.Month())
+		fmt.Println(date.Day())*/
+
+	/*	coordinates := encapsulation.Coordinates{}
+		err := coordinates.SetLatitude(37.42)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		err = coordinates.SetLongitude(-1122.08)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		fmt.Println(coordinates.Latitude())
+		fmt.Println(coordinates.Longitude())*/
+
+	/*	event := embedding.Event{}
+		err := event.SetYear(2019)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		err = event.SetMonth(5)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		err = event.SetDay(27)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		fmt.Println(event.Year())
+		fmt.Println(event.Month())
+		fmt.Println(event.Day())
+		fmt.Println(event.Date.Year())
+		fmt.Println(event.Date.Month())
+		fmt.Println(event.Date.Day())
+
+		err = event.SetTitle("An extremely long and impractial title")
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+
+	location := embedding.Landmark{}
+	err := location.SetName("The Googleplex")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = location.SetLatitude(37.42)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = location.SetLongitude(-122.08)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(location.Name())
+	fmt.Println(location.Latitude())
+	fmt.Println(location.Longitude())
+
 }
