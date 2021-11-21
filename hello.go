@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jmlim-go-study/embedding"
-	"log"
+	interface_playlist "jmlim-go-study/interface-playlist"
 )
 
 func main() {
@@ -286,25 +285,49 @@ func main() {
 			log.Fatal(err)
 		}
 	*/
+	/*
+		location := embedding.Landmark{}
+		err := location.SetName("The Googleplex")
+		if err != nil {
+			log.Fatal(err)
+		}
 
-	location := embedding.Landmark{}
-	err := location.SetName("The Googleplex")
-	if err != nil {
-		log.Fatal(err)
-	}
+		err = location.SetLatitude(37.42)
+		if err != nil {
+			log.Fatal(err)
+		}
 
-	err = location.SetLatitude(37.42)
-	if err != nil {
-		log.Fatal(err)
-	}
+		err = location.SetLongitude(-122.08)
+		if err != nil {
+			log.Fatal(err)
+		}
 
-	err = location.SetLongitude(-122.08)
-	if err != nil {
-		log.Fatal(err)
-	}
+		fmt.Println(location.Name())
+		fmt.Println(location.Latitude())
+		fmt.Println(location.Longitude())*/
 
-	fmt.Println(location.Name())
-	fmt.Println(location.Latitude())
-	fmt.Println(location.Longitude())
+	// 	interface_playlist.PlayListMain()
+	/*	var value interface_playlist.MyInterface
+		value = interface_playlist.MyType(5)
+		value.MethodWithoutParameters()
+		value.MethodWithParameter(127.3)
+		fmt.Println(value.MethodWithReturnValue())*/
 
+	//	interface_playlist.NoiseMakerMain()
+	//interface_playlist.PlayListMain()
+	//	interface_playlist.PointerReceiverMain()
+
+	//	interface_playlist.CarTruckExample()
+
+	//	interface_playlist.TypeAssertExample()
+	// interface_playlist.MainTryOut()
+	// interface_playlist.TryTruck()
+
+	/*	var err error = interface_playlist.CheckTemperature(121.379, 100.0)
+		if err != nil {
+			log.Fatal(err)
+		}*/
+
+	//	interface_playlist.CheckStringer()
+	interface_playlist.Main()
 }
