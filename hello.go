@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	structures_geo "jmlim-go-study/structures-geo"
-	structures_magazine "jmlim-go-study/structures-magazine"
+	user_type "jmlim-go-study/user-type"
 )
 
 func main() {
@@ -186,7 +185,7 @@ func main() {
 	//	structures.StructLiteral()
 	//	structures.StructLiteralExam()
 
-	address := structures_magazine.Address{Street: "123 Oak St", City: "Omaha", State: "NE", PostalCode: "68111"}
+	/*address := structures_magazine.Address{Street: "123 Oak St", City: "Omaha", State: "NE", PostalCode: "68111"}
 	subscriber := structures_magazine.Subscriber{Name: "Aman Singh"}
 	subscriber.Address = address
 	fmt.Println(subscriber.Address)
@@ -194,11 +193,25 @@ func main() {
 	fmt.Println(subscriber.PostalCode) // 임베딩 되어 이렇게도 사용가능. 상황에 따라 적합하게 사용하면 될 듯. 반드시 이렇게 쓸 필요 X
 	fmt.Printf("%#v\n", subscriber.Address)
 
-	fmt.Println("==========")
+	fmt.Println("==========")*/
 	// ==== geo
-	location := structures_geo.Landmark{}
+	/*location := structures_geo.Landmark{}
 	location.Name = "The Googleplex"
 	location.Latitude = 37.42
 	location.Longitude = -122.08
-	fmt.Println(location)
+	fmt.Println(location)*/
+
+	/*user_type.UserTypeBasic()
+	user_type.UserTypeOperator()
+	user_type.UserTypePopulation()
+	*/
+	//user_type.BasicUserTypeMethod()
+	//	user_type.UserTypeExam()
+
+	// user_type.PointerReceiver()
+	//	user_type.PointerReceiverStringEx()
+
+	//user_type.Soda()
+	//	user_type.Milk()
+	user_type.ChangeLitersOrMilliliters()
 }
