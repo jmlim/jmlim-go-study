@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	go_routine "jmlim-go-study/go-routine"
-	"time"
 )
 
 func main() {
@@ -379,11 +378,61 @@ func main() {
 	go_routine.ResponseSize("https://golang.org")
 	go_routine.ResponseSize("https://golang.org/doc")*/
 
-	go_routine.UseGoRoutine()
+	//go_routine.UseGoRoutine()
 	// 고루틴이 동시에 실행되면서 헌번에 출력
-	go go_routine.ResponseSize("https://example.com")
+	/*go go_routine.ResponseSize("https://example.com")
 	go go_routine.ResponseSize("https://www.naver.com")
 	go go_routine.ResponseSize("https://golang.org")
 	go go_routine.ResponseSize("https://golang.org/doc")
-	time.Sleep(5 * time.Second)
+	time.Sleep(5 * time.Second)*/
+
+	// go_routine.BasicChannel()
+	// go_routine.BasicChannel2()
+	//	go_routine.BasicChannel3()
+	// go_routine.BasicChannelExample()
+
+	/*	sizes := make(chan int)
+		go go_routine.ResponseSize("https://example.com", sizes)
+		go go_routine.ResponseSize("https://www.naver.com", sizes)
+		go go_routine.ResponseSize("https://golang.org", sizes)
+		go go_routine.ResponseSize("https://golang.org/doc", sizes)
+
+		fmt.Println(<-sizes)
+		fmt.Println(<-sizes)
+		fmt.Println(<-sizes)
+		fmt.Println(<-sizes)*/
+
+	/*sizes := make(chan int)
+	urls := []string{
+		"https://www.naver.com",
+		"https://example.com",
+		"https://golang.org",
+		"https://golang.org/doc",
+	}
+
+	// 루프를 분리해야 함.
+	// 만약 responseSize 고루틴을 실행하는 루프와 동일한 루프에서 동시에 값을 받아오게 되면, main 고루틴은 값을 받기 전까지
+	// 블로킹되기 때문에 한 번에 한페이지만 요청을 날리게 되는 문제가 발생함.
+	for _, url := range urls {
+		go go_routine.ResponseSize(url, sizes)
+	}
+
+	for i := 0; i < len(urls); i++ {
+		fmt.Println(<-sizes)
+	}*/
+
+	pages := make(chan go_routine.Page)
+	urls := []string{"https://www.naver.com",
+		"https://example.com",
+		"https://golang.org",
+		"https://golang.org/doc"}
+
+	for _, url := range urls {
+		go go_routine.ResponseSize(url, pages)
+	}
+
+	for i := 0; i < len(urls); i++ {
+		page := <-pages
+		fmt.Printf("%s: %d\n", page.URL, page.Size)
+	}
 }

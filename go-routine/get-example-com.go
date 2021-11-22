@@ -25,6 +25,7 @@ func ExampleCom() {
 
 }
 
+/*
 func ResponseSize(url string) {
 	fmt.Println("Getting", url)
 
@@ -38,7 +39,7 @@ func ResponseSize(url string) {
 		log.Fatal(err)
 	}
 	fmt.Println(len(body)) //byte 슬라이스의 크기는 페이지의 크기와 같습니다
-}
+}*/
 
 /**
 go 에서는 동시에 실행되는 작업을 고루틴이라고 부른다.
@@ -51,3 +52,40 @@ go 에서는 동시에 실행되는 작업을 고루틴이라고 부른다.
 
  go 문은 반환값과 함께 사용할 수 없음.. (참고)
 */
+
+/*func ResponseSize(url string, channel chan int) {
+	fmt.Println("Getting", url)
+
+	response, err := http.Get(url)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer response.Body.Close()
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	// 채널에 길이값 반환
+	channel <- len(body) //byte 슬라이스의 크기는 페이지의 크기와 같습니다
+}*/
+
+type Page struct {
+	URL  string
+	Size int
+}
+
+func ResponseSize(url string, channel chan Page) {
+	fmt.Println("Getting", url)
+
+	response, err := http.Get(url)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer response.Body.Close()
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	// 채널에 길이값 반환
+	channel <- Page{URL: url, Size: len(body)}
+}
