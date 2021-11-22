@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	defer_panic_recover "jmlim-go-study/defer-panic-recover"
+	go_routine "jmlim-go-study/go-routine"
+	"time"
 )
 
 func main() {
@@ -371,5 +372,18 @@ func main() {
 	/*	defer_panic_recover.FreakOut2()
 		fmt.Println("Exiting normally")*/
 
-	defer_panic_recover.ScanDirectoryMain()
+	// defer_panic_recover.ScanDirectoryMain()
+	// go_routine.ExampleCom()
+	/*go_routine.ResponseSize("https://example.com")
+	go_routine.ResponseSize("https://www.naver.com")
+	go_routine.ResponseSize("https://golang.org")
+	go_routine.ResponseSize("https://golang.org/doc")*/
+
+	go_routine.UseGoRoutine()
+	// 고루틴이 동시에 실행되면서 헌번에 출력
+	go go_routine.ResponseSize("https://example.com")
+	go go_routine.ResponseSize("https://www.naver.com")
+	go go_routine.ResponseSize("https://golang.org")
+	go go_routine.ResponseSize("https://golang.org/doc")
+	time.Sleep(5 * time.Second)
 }
