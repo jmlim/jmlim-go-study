@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	go_routine "jmlim-go-study/go-routine"
+	automated_test "jmlim-go-study/automated-test"
 )
 
 func main() {
@@ -421,7 +421,7 @@ func main() {
 		fmt.Println(<-sizes)
 	}*/
 
-	pages := make(chan go_routine.Page)
+	/*pages := make(chan go_routine.Page)
 	urls := []string{"https://www.naver.com",
 		"https://example.com",
 		"https://golang.org",
@@ -434,5 +434,7 @@ func main() {
 	for i := 0; i < len(urls); i++ {
 		page := <-pages
 		fmt.Printf("%s: %d\n", page.URL, page.Size)
-	}
+	}*/
+
+	automated_test.JoinWithCommasMain()
 }
