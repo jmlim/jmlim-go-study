@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	interface_playlist "jmlim-go-study/interface-playlist"
+	defer_panic_recover "jmlim-go-study/defer-panic-recover"
 )
 
 func main() {
@@ -329,5 +329,47 @@ func main() {
 		}*/
 
 	//	interface_playlist.CheckStringer()
-	interface_playlist.Main()
+	// interface_playlist.Main()
+
+	/*	numbers, err := defer_panic_recover.GetFloats(os.Args[1])
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		var sum float64 = 0
+		for _, number := range numbers {
+			sum += number
+		}
+		fmt.Printf("Sum : %0.2f\n", sum)*/
+
+	//	defer_panic_recover.Socialize()
+	/*	err = defer_panic_recover.Socialize()
+		if err != nil {
+			log.Fatal(err)
+		}*/
+
+	// defer_panic_recover.RefrigeratorMain()
+
+	//	defer_panic_recover.DirectoryFile()
+
+	//	recursion.RecursesCount(1, 3)
+
+	/*	err := defer_panic_recover.ScanDirectory("/Users/jmlim/dev/qr")
+		if err != nil {
+			log.Fatal(err)
+		}*/
+	// 	defer_panic_recover.GoPanic()
+	//	defer_panic_recover.Start()
+
+	//	defer_panic_recover.StartDefer()
+	//	defer_panic_recover.AwardPrizeMain()
+
+	// 	defer_panic_recover.Snack()
+	/*	defer_panic_recover.FreakOut()
+		fmt.Println("Exiting normally")*/
+
+	/*	defer_panic_recover.FreakOut2()
+		fmt.Println("Exiting normally")*/
+
+	defer_panic_recover.ScanDirectoryMain()
 }
