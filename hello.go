@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	automated_test "jmlim-go-study/automated-tt"
+	"jmlim-go-study/webapp"
 )
 
 func main() {
@@ -436,5 +436,11 @@ func main() {
 		fmt.Printf("%s: %d\n", page.URL, page.Size)
 	}*/
 
-	automated_test.JoinWithCommasMain()
+	//	automated_test.JoinWithCommasMain()
+	// webapp.LanguageWeb()
+	// webapp.MainSayHi()
+	//	webapp.MainTwice()
+	// webapp.DivideMain()
+	//	webapp.MainDoMath()
+	webapp.FirstClassFunc()
 }
