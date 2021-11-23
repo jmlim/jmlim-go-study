@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jmlim-go-study/webapp"
+	"jmlim-go-study/guestbookapp"
 )
 
 func main() {
@@ -442,5 +442,6 @@ func main() {
 	//	webapp.MainTwice()
 	// webapp.DivideMain()
 	//	webapp.MainDoMath()
-	webapp.FirstClassFunc()
+	//	webapp.FirstClassFunc()
+	guestbookapp.GuestBookMain()
 }
