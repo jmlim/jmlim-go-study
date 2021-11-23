@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	automated_test "jmlim-go-study/automated-test"
+	automated_test "jmlim-go-study/automated-tt"
 )
 
 func main() {

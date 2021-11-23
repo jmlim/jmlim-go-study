@@ -1,4 +1,4 @@
-package automated_test
+package automated_tt
 
 import (
 	"fmt"
@@ -7,7 +7,16 @@ import (
 
 func JoinWithCommas(phrases []string) string {
 	result := strings.Join(phrases[:len(phrases)-1], ", ")
-	result += ", and "
+
+	if len(phrases) == 0 {
+		return ""
+	} else if len(phrases) == 1 {
+		return phrases[0]
+	} else if len(phrases) == 2 {
+		result += " and "
+	} else {
+		result += ", and "
+	}
 	result += phrases[len(phrases)-1]
 	return result
 }
